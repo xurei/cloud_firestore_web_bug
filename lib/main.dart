@@ -13,7 +13,7 @@ void main() async {
   final FirebaseFirestore firestoreClient = FirebaseFirestore.instance;
 
   print('Querying firestore...');
-  final element = await firestoreClient.collection('items').doc('111111111111').collection('business_events').doc('2VkhxkmHlAISp0myOZY6').get();
+  final element = await firestoreClient.collection('items').doc('111111111111').get();
 
   print('Received document');
   final payload = element.data()['Payload'];
